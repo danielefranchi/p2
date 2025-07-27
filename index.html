@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="bitcoin-icon">₿</div>
+            <h</h1>
+        </header>
+        
+        <!-- Description -->
+        <p class="description">
+            Convert any Gregorian year to Bitcoin Calendar format
+        </p>
+        
+        <!-- Subtitle -->
+        <p class="subtitle">
+            Year 0 marks the invention of Bitcoin (2008 AD). Years before are labeled "Before Bitcoin (BB)" and years after are "After Bitcoin (AB)".
+        </p>
+        
+        <!-- Year Converter Section -->
+        <div class="converter-section">
+            <h2 class="converter-title">Year Converter</h2>
+            <p class="converter-subtitle">Enter a Gregorian calendar year</p>
+            
+            <div class="input-section">
+                <input type="text" id="yearInput" class="year-input" placeholder="e.g., 2024">
+                <button class="convert-btn" onclick="convertYear()">Convert</button>
+            </div>
+            
+            <div id="result" class="result"></div>
+        </div>
+        
+        <!-- Genesis Block Reference Toggle -->
+        <div class="toggle-section">
+            <div class="toggle-header">
+                <span class="toggle-title">Genesis Block Reference</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="genesisToggle" onchange="updateReference()">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <p class="toggle-description">
+                Use Genesis Block (2009) instead of Whitepaper (2008) as Year 0
+            </p>
+        </div>
+        
+        <!-- Example Conversions -->
+        <div class="examples-section">
+            <h2 class="examples-title">Example Conversions</h2>
+            <p class="examples-subtitle">See how historical years convert</p>
+            
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-year">1971 AD</div>
+                    <div class="example-result">37 BB</div>
+                </div>
+                <div class="example-card highlight">
+                    <div class="example-year">2008 AD</div>
+                    <div class="example-result highlight-text">Year 0 AB (Bitcoin Invention)</div>
+                </div>
+                <div class="example-card">
+                    <div class="example-year">2009 AD</div>
+                    <div class="example-result">1 AB</div>
+                </div>
+                <div class="example-card">
+                    <div class="example-year">2025 AD</div>
+                    <div class="example-result">17 AB</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built to commemorate the revolutionary impact of Bitcoin on the world. 🚀</p>
+            <div class="footer-action">
+                <span>Enjoying this tool?</span>
+                <button class="donate-btn">Donate Bitcoin</button>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
