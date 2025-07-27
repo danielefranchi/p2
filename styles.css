@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.bitcoin-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #f7931a, #ff9500);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 4px 15px rgba(247, 147, 26, 0.3);
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 400;
+    color: #f7931a;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Description */
+.description {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #cccccc;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #888888;
+    margin-bottom: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Converter Section */
+.converter-section {
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.converter-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.converter-subtitle {
+    color: #cccccc;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.input-section {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.year-input {
+    background-color: #3a3a3a;
+    border: 2px solid #4a4a4a;
+    border-radius: 8px;
+    padding: 15px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+    width: 200px;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.year-input:focus {
+    outline: none;
+    border-color: #f7931a;
+}
+
+.year-input::placeholder {
+    color: #888888;
+}
+
+.convert-btn {
+    background: linear-gradient(135deg, #f7931a, #ff9500);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.convert-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(247, 147, 26, 0.4);
+}
+
+.result {
+    font-size: 24px;
+    font-weight: 500;
+    color: #f7931a;
+    min-height: 30px;
+}
+
+/* Toggle Section */
+.toggle-section {
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.toggle-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.toggle-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4a4a4a;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #f7931a;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.toggle-description {
+    color: #cccccc;
+    font-size: 14px;
+}
+
+/* Examples Section */
+.examples-section {
+    margin-bottom: 50px;
+}
+
+.examples-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.examples-subtitle {
+    color: #cccccc;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.example-card {
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.example-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+.example-card.highlight {
+    background: linear-gradient(135deg, #f7931a, #ff9500);
+    color: white;
+}
+
+.example-year {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.example-result {
+    font-size: 16px;
+    color: #f7931a;
+}
+
+.highlight-text {
+    color: white !important;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #3a3a3a;
+}
+
+.footer p {
+    color: #cccccc;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.footer-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-action span {
+    color: #cccccc;
+    font-size: 14px;
+}
+
+.donate-btn {
+    background: linear-gradient(135deg, #f7931a, #ff9500);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.donate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(247, 147, 26, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;
+    }
+    
+    .title {
+        font-size: 36px;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .converter-section {
+        padding: 30px 20px;
+    }
+    
+    .input-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .year-input {
+        width: 100%;
+    }
+    
+    .toggle-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .examples-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-action {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 28px;
+    }
+    
+    .converter-title {
+        font-size: 24px;
+    }
+    
+    .examples-title {
+        font-size: 24px;
+    }
+}
